@@ -10,8 +10,8 @@ export default function Header() {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Portfolio', href: '/portfolio' },
     { name: 'Chi sono', href: '/about' },
+    { name: 'Portfolio', href: '/portfolio' },
     { name: 'Contatti', href: '/contact' },
   ]
 
@@ -21,8 +21,8 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-xl font-bold text-primary-600">
-              Il Mio Sito
+            <Link href="/" className="text-xl font-bold text-primary-600 flex items-center">
+              📝 <span className="ml-1">Dev Blog</span>
             </Link>
           </div>
 

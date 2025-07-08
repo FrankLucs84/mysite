@@ -17,12 +17,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="col-span-1">
-            <Link href="/" className="text-xl font-bold text-primary-600">
-              Il Mio Sito
+            <Link href="/" className="text-xl font-bold text-primary-600 flex items-center">
+              📝 <span className="ml-1">Dev Blog</span>
             </Link>
             <p className="mt-2 text-gray-600 text-sm">
-              Blog personale e portfolio di progetti. 
-              Condivido le mie esperienze nel mondo dello sviluppo web.
+              Tutorial, guide e riflessioni dal mondo dello sviluppo web moderno. 
+              Condivido tutto quello che imparo nel mio percorso da developer.
             </p>
           </div>
 

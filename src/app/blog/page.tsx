@@ -9,14 +9,22 @@ export default function BlogPage() {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Il Mio Blog
-          </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Condivido le mie esperienze, tutorial e riflessioni nel mondo dello sviluppo web
-          </p>
-        </div>
+                  <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              📝 Il Mio Blog Tecnico
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Tutorial approfonditi, guide pratiche e riflessioni sul mondo dello sviluppo web moderno. 
+              Tutto quello che imparo e sperimento, condiviso con la community.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-2">
+              <span className="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Next.js</span>
+              <span className="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">TypeScript</span>
+              <span className="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">React</span>
+              <span className="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">Performance</span>
+              <span className="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full">DevOps</span>
+            </div>
+          </div>
 
         {/* Blog Posts */}
         {posts.length > 0 ? (
