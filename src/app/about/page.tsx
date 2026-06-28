@@ -1,203 +1,145 @@
 import Link from 'next/link'
-import { MapPin, Calendar, Mail, Linkedin, Github, Download } from 'lucide-react'
+import { MapPin, Mail, Phone, Linkedin, Github, GraduationCap, Briefcase, ArrowRight } from 'lucide-react'
+
+const experience = [
+  {
+    company: 'Maurelli Group SPA',
+    location: 'Napoli',
+    roles: [
+      { title: 'Head of PMO', period: 'Gennaio 2026 – presente', duration: '6 mesi', current: true },
+      { title: 'Project Manager', period: 'Settembre 2022 – Dicembre 2025', duration: '3 anni 4 mesi', current: false },
+    ],
+  },
+  {
+    company: 'Multiesse Srl – GDO',
+    location: 'Napoli, Campania, Italia',
+    roles: [
+      { title: 'Controllo di gestione (Business Controller)', period: 'Settembre 2019 – Agosto 2022', duration: '3 anni', current: false },
+      { title: 'Impiegato commerciale e sviluppo progetti', period: 'Aprile 2017 – Agosto 2022', duration: '5 anni 5 mesi', current: false },
+      { title: 'Impiegato amministrativo-contabile', period: 'Gennaio 2015 – Marzo 2017', duration: '2 anni 3 mesi', current: false },
+    ],
+  },
+  {
+    company: 'Pasi SpA "Flordocafè"',
+    location: 'Napoli, Italia',
+    roles: [
+      { title: 'Direttore di filiale', period: 'Maggio 2010 – Dicembre 2014', duration: '4 anni 8 mesi', current: false },
+    ],
+  },
+]
 
 export default function AboutPage() {
-  const timeline = [
-    {
-      year: "2024",
-      title: "Senior Full-Stack Developer",
-      company: "TechCorp S.r.l.",
-      description: "Sviluppo di applicazioni web scalabili utilizzando Next.js, TypeScript e cloud AWS. Lead di un team di 4 sviluppatori."
-    },
-    {
-      year: "2022",
-      title: "Full-Stack Developer",
-      company: "StartupXYZ",
-      description: "Sviluppo completo di piattaforma SaaS da zero. Stack: React, Node.js, PostgreSQL, Docker."
-    },
-    {
-      year: "2020",
-      title: "Frontend Developer",
-      company: "WebAgency",
-      description: "Sviluppo di siti web e applicazioni frontend per clienti enterprise. Specializzazione in React e Vue.js."
-    },
-    {
-      year: "2019",
-      title: "Laurea in Informatica",
-      company: "Università di Milano",
-      description: "Tesi di laurea sull'intelligenza artificiale applicata al web development. Voto: 110/110 con lode."
-    }
-  ]
-
-  const interests = [
-    "Intelligenza Artificiale",
-    "Open Source",
-    "Fotografia",
-    "Viaggi",
-    "Gaming",
-    "Cucina",
-    "Lettura Tech",
-    "Blockchain"
-  ]
-
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="mb-8">
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
-              alt="Profile"
-              className="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg"
-            />
+      {/* Hero */}
+      <div className="bg-white border-b">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
+            <div className="flex-shrink-0 w-28 h-28 rounded-full bg-primary-700 flex items-center justify-center text-3xl font-bold text-white border-4 border-primary-100">
+              FL
+            </div>
+            <div className="text-center sm:text-left">
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Francesco Lucignano</h1>
+              <p className="text-lg text-primary-700 font-medium mb-3">PMO | ICT | Business Analyst</p>
+              <div className="flex flex-wrap gap-4 justify-center sm:justify-start text-sm text-gray-500">
+                <span className="flex items-center gap-1"><MapPin className="h-4 w-4" /> Brusciano (NA), Campania</span>
+                <a href="tel:+393500109024" className="flex items-center gap-1 hover:text-primary-600"><Phone className="h-4 w-4" /> +39 350 010 9024</a>
+                <a href="mailto:francesco.lucignano@gmail.com" className="flex items-center gap-1 hover:text-primary-600"><Mail className="h-4 w-4" /> francesco.lucignano@gmail.com</a>
+              </div>
+              <div className="flex gap-3 mt-4 justify-center sm:justify-start">
+                <a href="https://www.linkedin.com/in/francescolucignano84/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary-600 transition-colors"><Linkedin className="h-5 w-5" /></a>
+                <a href="https://github.com/FrankLucs84" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-900 transition-colors"><Github className="h-5 w-5" /></a>
+              </div>
+            </div>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Chi sono
-          </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Sviluppatore Full-Stack con oltre 5 anni di esperienza nella creazione 
-            di applicazioni web moderne e soluzioni digitali innovative.
+        </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+
+        {/* Profile */}
+        <section className="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-5">Profilo</h2>
+          <p className="text-gray-600 text-lg leading-relaxed">
+            Specializzato in Project Management, con particolare focus sui progetti software,
+            unisco il rigore metodologico del PMI all&apos;integrazione di soluzioni basate sull&apos;IA.
+            Supporto i team attraverso un attento Change Management e la mediazione dei conflitti
+            organizzativi, curando piani operativi e reportistica strutturata per mantenere gli
+            stakeholder informati sui progressi.
           </p>
-        </div>
-
-        {/* Info Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <div className="bg-white rounded-lg shadow-md p-6 text-center">
-            <MapPin className="h-8 w-8 text-primary-600 mx-auto mb-2" />
-            <h3 className="font-semibold text-gray-900 mb-1">Location</h3>
-            <p className="text-gray-600">Milano, Italia</p>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-6 text-center">
-            <Calendar className="h-8 w-8 text-primary-600 mx-auto mb-2" />
-            <h3 className="font-semibold text-gray-900 mb-1">Esperienza</h3>
-            <p className="text-gray-600">5+ anni</p>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-6 text-center">
-            <Mail className="h-8 w-8 text-primary-600 mx-auto mb-2" />
-            <h3 className="font-semibold text-gray-900 mb-1">Status</h3>
-            <p className="text-gray-600">Disponibile per progetti</p>
-          </div>
-        </div>
-
-        {/* About Text */}
-        <section className="bg-white rounded-lg shadow-md p-8 mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">La mia storia</h2>
-          <div className="prose prose-lg max-w-none text-gray-700">
-            <p>
-              Ciao! Sono un sviluppatore Full-Stack appassionato con una forte predilezione 
-              per le tecnologie moderne e l&apos;innovazione continua. La mia carriera è iniziata 
-              nel 2019 quando ho conseguito la laurea in Informatica presso l&apos;Università di Milano.
-            </p>
-            <p>
-              Durante questi anni ho avuto l&apos;opportunità di lavorare su progetti molto diversi, 
-              dalle startup innovative alle grandi enterprise, acquisendo competenze sia tecniche 
-              che di leadership. Mi appassiona particolarmente l&apos;aspetto problem-solving dello 
-              sviluppo software e la possibilità di creare soluzioni che abbiano un impatto reale 
-              sulla vita delle persone.
-            </p>
-            <p>
-              Quando non sto programmando, amo viaggiare per scoprire nuove culture, 
-              praticare fotografia e sperimentare nuove tecnologie emergenti. Sono anche 
-              un contributore attivo della community open source e partecipo regolarmente 
-              a meetup e conferenze del settore.
-            </p>
-            <p>
-              Il mio obiettivo è sempre quello di scrivere codice pulito, manutenibile e 
-              performante, seguendo le best practices e rimanendo sempre aggiornato sulle 
-              ultime tendenze tecnologiche.
-            </p>
-          </div>
         </section>
 
-        {/* Timeline */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-            Il mio percorso
+        {/* Experience */}
+        <section>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+            <Briefcase className="h-6 w-6 text-primary-600" />
+            Esperienza professionale
           </h2>
-          <div className="space-y-8">
-            {timeline.map((item, index) => (
-              <div key={index} className="flex flex-col md:flex-row md:items-center">
-                <div className="md:w-20 flex-shrink-0 mb-2 md:mb-0">
-                  <span className="inline-block bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    {item.year}
-                  </span>
+          <div className="space-y-6">
+            {experience.map((exp) => (
+              <div key={exp.company} className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <div className="flex items-start gap-3 mb-4">
+                  <div className="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Briefcase className="h-5 w-5 text-primary-700" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-lg">{exp.company}</h3>
+                    <p className="text-gray-400 text-sm">{exp.location}</p>
+                  </div>
                 </div>
-                <div className="md:ml-8 bg-white rounded-lg shadow-md p-6 flex-grow">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
-                    {item.title}
-                  </h3>
-                  <p className="text-primary-600 font-medium mb-2">
-                    {item.company}
-                  </p>
-                  <p className="text-gray-600">
-                    {item.description}
-                  </p>
+                <div className="space-y-3 pl-13">
+                  {exp.roles.map((role) => (
+                    <div key={role.title} className="flex flex-col sm:flex-row sm:items-center justify-between py-3 border-t border-gray-50 first:border-0 first:pt-0 gap-1">
+                      <div>
+                        <p className="font-semibold text-gray-800">{role.title}</p>
+                        <p className="text-sm text-gray-500">{role.period}</p>
+                      </div>
+                      <div className="flex items-center gap-2 flex-shrink-0">
+                        <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${role.current ? 'bg-primary-100 text-primary-700' : 'bg-gray-100 text-gray-600'}`}>
+                          {role.current ? 'Attuale' : role.duration}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Interests */}
-        <section className="bg-white rounded-lg shadow-md p-8 mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Interessi e passioni
+        {/* Education */}
+        <section className="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-5 flex items-center gap-2">
+            <GraduationCap className="h-6 w-6 text-primary-600" />
+            Istruzione
           </h2>
-          <div className="flex flex-wrap gap-3">
-            {interests.map((interest) => (
-              <span 
-                key={interest}
-                className="px-4 py-2 bg-primary-100 text-primary-800 rounded-full"
-              >
-                {interest}
-              </span>
-            ))}
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="text-center bg-primary-50 rounded-lg p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Vuoi saperne di più?
-          </h2>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Sono sempre interessato a nuove opportunità e collaborazioni. 
-            Scarica il mio CV o contattami direttamente per discutere di potenziali progetti.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary">
-              Contattami
-            </Link>
-            <a 
-              href="/cv.pdf" 
-              className="btn-secondary inline-flex items-center"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Download className="h-4 w-4 mr-2" />
-              Scarica CV
-            </a>
-            <div className="flex gap-4 justify-center sm:ml-4">
-              <a 
-                href="https://linkedin.com/in/tuousername"
-                className="text-gray-600 hover:text-primary-600 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Linkedin className="h-6 w-6" />
-              </a>
-              <a 
-                href="https://github.com/tuousername"
-                className="text-gray-600 hover:text-primary-600 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="h-6 w-6" />
-              </a>
+          <div className="flex items-start gap-4">
+            <div className="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+              <GraduationCap className="h-5 w-5 text-primary-700" />
+            </div>
+            <div>
+              <h3 className="font-bold text-gray-900">Università degli Studi di Napoli Federico II</h3>
+              <p className="text-primary-700 font-medium">Laurea in Economia Aziendale</p>
+              <p className="text-gray-400 text-sm">2005 – 2010</p>
             </div>
           </div>
         </section>
+
+        {/* CTA */}
+        <section className="bg-primary-50 rounded-xl p-8 text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-3">Vuoi collaborare?</h2>
+          <p className="text-gray-600 mb-6">Sono disponibile per nuove opportunità. Contattami per discutere come posso contribuire ai tuoi progetti.</p>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <Link href="/contact" className="btn-primary">
+              Contattami
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link href="/portfolio" className="btn-secondary">
+              Vedi le competenze
+            </Link>
+          </div>
+        </section>
+
       </div>
     </div>
   )

@@ -7,8 +7,8 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Il Mio Sito Web Personale',
-  description: 'Blog personale e portfolio di progetti',
+  title: 'Francesco Lucignano – PMO | ICT | Business Analyst',
+  description: 'Portfolio professionale di Francesco Lucignano. Specializzato in Project Management, ICT e Business Analysis con oltre 15 anni di esperienza.',
 }
 
 export default function RootLayout({
