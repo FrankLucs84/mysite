@@ -102,7 +102,7 @@ export default function Home() {
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
                 Attualmente ricopro il ruolo di <strong>Head of PMO</strong> presso Maurelli Group SPA,
-                dove guido la gestione strategica di tutti i progetti ICT ed ERP dell&apos;azienda.
+                dove guido la gestione strategica dei maggiori progetti ICT dell&apos;azienda.
               </p>
               <Link href="/about" className="btn-primary">
                 Il mio percorso
